@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bob's Trip to Bali</title>
+</head>
+
+<body>
+
+<script> 
+
+function calcPrice() {
+	alert("calcPrice() executed");
+}
+
+</script>
+
+
+<form name="form1" method="post" action="">
+<p><strong>Bob's Trip to Bali</strong></p>
+
+<p>&nbsp;</p>
+<p><strong>Flight</strong></p>
+<p>
+<input type="radio" name="radio" id="fEcon_rb" value="fEcon_rb" onchange="calcPrice();" checked>
+<label for="econ_rb">Economy</label>
+@ $750 </p>
+<p>
+<input type="radio" name="radio" id="fFirst_rb" value="fFirst_rb" onchange="calcPrice();" >
+<label for="fFirst_rb">First Class</label>
+@ $1375</p>
+
+<p><strong>Nights in Hotel @ $100 / night</strong></p>
+<p>
+<select name="hotel_sel" id="hotel_sel" onchange="calcPrice();">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</p>
+
+<p><strong>Scooter Rental @ $50 / day</strong></p>
+<p>
+<select name="scooter_sel" id="scooter_sel" onchange="calcPrice();">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</p>
+
+<p><strong>Cancellation Insurance ($35)</strong></p>
+<p>
+<input type="checkbox" name="ins_cb" id="ins_cb" onchange="calcPrice();">
+<label for="ins_cb">Uncheck this box if you want to <em>decline</em> cancellation insurance</label>
+</p>
+<p>&nbsp;</p>
+
+<p><strong>Price Breakdown</strong></p>
+<p>
+<label for="subtotal_txt">Subtotal</label>
+<input type="text" name="subtotal_txt" id="subtotal_txt" value="0" readonly><br>
+<label for="tax_txt">Tourist tax (10%)</label>
+<input type="text" name="tax_txt" id="tax_txt" value="0" readonly><br>
+<label for="total_txt">Total</label>
+<input type="text" name="total_txt" id="total_txt" value="0" readonly>
+</p>
+
+</form>
+
+</body>
+</html>
