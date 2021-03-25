@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML form with multiple object events</title>
+</head>
+<body>
+
+<script>
+
+function convert() {
+    // Function converts lb-> kg OR kg->lb and updates display
+    // Receives no parameters
+    if (document.getElementById("lb_rb").checked == true) { // lbs -> kg radio button is selected
+        // Calculate kg and use global object method Math.round() to round to the nearest integer
+        kgs = Math.round( document.getElementById("pounds_txt").value * 0.453592 );
+        // Assign the value of kgs to the value of the kg text input
+        document.getElementById("kilos_txt").value = kgs;
+    }
+    else { // kg -> lbs radio button is selected
+        // Calculate kg and use global object method Math.round() to round to the nearest integer
+        lbs = Math.round(document.getElementById("kilos_txt").value / 0.453592);
+        // Assign the value of kgs to the value of the kg text input
+        document.getElementById("pounds_txt").value = lbs;
+    }
+}
+
+function enableDisable(src_rb) {
+    // Receives a reference to the radio button that called it.
+	if (src_rb.value == "lb") { // lbs -> kg radio button is selected
+        document.getElementById("kilos_txt").disabled = true;
+        document.getElementById("pounds_txt").disabled = false;
+
+    }
+    else { // kg -> lbs radio button is selected
+        document.getElementById("kilos_txt").disabled = false;
+        document.getElementById("pounds_txt").disabled = true;
+    }
+    // Set both input text values to zero for a neater appearance
+    document.getElementById("kilos_txt").value = 0;
+    document.getElementById("pounds_txt").value = 0;
+}
+
+
+</script>
+
+<p>Choose <strong>Pounds_txt to Kilograms </strong>or <strong>Kilogram to pounds_txt</strong>, enter a value in the appropriate box, and then click <strong>Convert</strong>.</p>
+
+<form>
+
+<!-- Add both rb call the same onchange() -->
+<p>
+<input type="radio" name="lbkg_rbg" id="lb_rb" value="lb" checked onchange="enableDisable(this);">
+<label for="lb_rb">Pounds to kilograms</label><br>
+<input type="radio" name="lbkg_rbg" id="kg_rb" value="kg" onchange="enableDisable(this);">
+<label for="kg_rb">Kilograms to pounds</label>
+</p>
+
+<!-- Because default radio button is lb->kg we want to disiable kg text input  -->
+<p>
+    <label for="pounds_txt">Pounds: </label>
+<input type="text" name="pounds_txt" id="pounds_txt" value="0" ><br>
+<label for="kilos_txt">Kilograms: </label>
+<input type="text" name="kilos_txt" id="kilos_txt" value="0" disabled>
+</p>
+
+<!-- Clicking the button calls convert(). Function convert() determines which radio button is chekced and then does conversion  -->
+<p>
+<input type="button" value="Convert" id="button_btn" onclick="convert();">
+</p>
+    
+</form>
+
+</body>
+</html>
