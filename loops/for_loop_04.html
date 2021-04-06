@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accumulator pattern with array</title>
+</head>
+
+<body>
+
+<script> 
+
+/* Structure of a for loop
+
+for (initial expression; condition expression; increment expression) {}
+    statement(s) 
+}
+
+*/
+
+// Create an array to use in this example
+var items = [23.59, 30.00, 27.99, 21.95];
+
+// Create a value that holds the running total 
+var total = 0;
+
+// Use for loop to iterate through the elements in an array
+for (var i = 0; i < items.length; i = i + 1) {
+    total = total + items[i];
+}
+
+// Calculate the average
+var avg = total / items.length;
+
+// Display the number of items and the average of those items
+document.writeln("<p>The total price of the " + items.length + " items is: " + total + "</p>");
+document.writeln("<p>The average price of the " + items.length + " items is: " + avg + "</p>");
+
+</script>
+
+</body>
+</html>

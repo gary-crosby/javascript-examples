@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Use for loop to find in an array of numbers the maximum value in the array</title>
+</head>
+
+<body>
+
+<script>
+
+// Problem:
+//
+// We have two arrays -- one containing numbers and the other containing an equal number of strings.
+// We need to find the nighest number (in the array) and then find the string value that corresponds to that number.
+// 
+// In this exampe we create an array of items in a shopping cart and an array of those item's prices.
+// We want to find the maximum price and then identify the string vlaue that corresponds to that price.
+
+// Array of items in our shopping cart
+var items = ["small chocolate bar", "bottle of Coke", "large bag of Doritos", "pair of running shoes", "bottle of vitamins"];
+// Array with prices that correspond to the products
+var prices = [1.00, 2.50, 3.75, 49.50, 16.25];
+
+// Create a variable to store the highest price and index of that price.
+var maxPriceVal = 0.00; // Initial price == 0.00 because it is the lowest possible price ($0.00 == FREE!)
+var maxPriceIndex = -1; // Initial index == -1 because there is array[-1] does not exist
+
+// Loop through array to compare prices[i] to maxPriceVal 
+for (var i = 0; i < prices.length; i++) {
+    if (prices[i] > maxPriceVal) {  
+        // When price of this item is greater than the max then
+        // make it the max price and also store its index value
+        maxPriceVal = prices[i]; 
+        maxPriceIndex = i; 
+    }
+    else {
+        // prices[i] <=  maxPriceVal so do nothing 
+    }
+}
+
+// Display the max price and the name of that item
+document.write("<p>The highest price in the list: $" + maxPriceVal + "</p>");
+document.write("<p>The item with the highest price: " + items[maxPriceIndex] + "</p>");
+
+</script>
+
+</body>
+</html>

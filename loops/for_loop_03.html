@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Use for loop to iterate forward or backwards through arrays</title>
+</head>
+
+<body>
+
+<script> 
+
+/* Structure of a for loop
+
+for (initial expression; condition expression; increment expression) {}
+    statement(s)
+}
+
+*/
+
+// Create an array to use in this example
+var items = ["small chocolate bar", "bottle of Coke", "large bag of Doritos", "pair of running shoes", "bottle of vitamins", "T-shirt"];
+
+// Use for loop to iterate through the elements an array
+for (var i = 0; i < items.length; i = i + 1) {
+    document.writeln("<p>" + items[i] + "</p>");
+}
+
+// Separate using an empty <p>
+document.writeln("<p>&nbsp;</p")
+
+// Use for loop to iterate through the items in an array BACKWARDS
+for (var i = (items.length - 1); i >= 0; i = i -1) {
+    document.writeln("<p>" + items[i] + "</p>");
+}
+
+</script>
+
+</body>
+</html>
