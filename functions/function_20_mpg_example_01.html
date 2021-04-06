@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Why use a funcion?</title>
+</head>
+
+<body>
+
+<script> 
+
+// Example of what not to do!!!
+
+function displayMPG(m, g) {
+    document.write("<tr>");
+    document.write("<td>");
+    document.write(m);
+    document.write("</td>");
+    document.write("<td>");
+    document.write(g);
+    document.write("</td>");
+    document.write("<td>");
+    document.write( Math.round(m/g) ); // round to the nearest whole number
+    document.write("</td>");
+    document.write("<tr>");
+}
+
+// Declare 2 arrays
+var miles = new Array(); // Miles travelled by the vehicle
+var gallons = new Array(); // Gallons of fuel used
+
+// Populate 2 arrays with 8 values each
+miles = [12, 43, 54, 78, 21, 123, 127, 34];
+gallons = [1, 2.2, 5.1, 3.7, 1.9, 2.2, 3, 5.1]; 
+
+// Create a table with headinhs: miles, gallons, and calculate mpg
+document.write("<table>");
+document.write("<tr>");
+document.write("<th>");
+document.write("Miles");
+document.write("</th>");
+document.write("<th>");
+document.write("Gallons");
+document.write("</th>");
+document.write("<th>");
+document.write("Calculated MPG");
+document.write("</th>");
+document.write("<tr>");
+
+// For each vehicle calculate MPG and then displays as a row
+for (var v = 0; v < miles.length; v++) {
+    displayMPG( miles[v], gallons[v] );
+}
+
+// End table
+document.write("</table>");
+
+</script>
+
+</body>
+</html>

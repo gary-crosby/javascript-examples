@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Why use a funcion?</title>
+</head>
+
+<body>
+
+<script> 
+
+// Example of what not to do!!!
+
+// Declare 2 arrays
+var miles = new Array(); // Miles travelled by the vehicle
+var gallons = new Array(); // Gallons of fuel used
+
+// Populate 2 arrays with 5 values each
+miles = [12, 43, 54, 78, 21];
+gallons = [1, 2.2, 5.1, 3.7, 1.9]; 
+
+// Create a table with headinhs: miles, gallons, and calculate mpg
+document.write("<table>");
+document.write("<tr>");
+document.write("<th>");
+document.write("Miles");
+document.write("</th>");
+document.write("<th>");
+document.write("Gallons");
+document.write("</th>");
+document.write("<th>");
+document.write("Calculated MPG");
+document.write("</th>");
+document.write("<tr>");
+
+// First set of values
+document.write("<tr>");
+document.write("<td>");
+document.write(miles[0]);
+document.write("</td>");
+document.write("<td>");
+document.write(gallons[0]);
+document.write("</td>");
+document.write("<td>");
+document.write( Math.round(miles[0]/gallons[0]) ); // round to the nearest whole number
+document.write("</td>");
+document.write("<tr>");
+
+// Second set of values
+document.write("<tr>");
+document.write("<td>");
+document.write(miles[1]);
+document.write("</td>");
+document.write("<td>");
+document.write(gallons[1]);
+document.write("</td>");
+document.write("<td>");
+document.write( Math.round(miles[1]/gallons[1]) ); // round to the nearest whole number
+document.write("</td>");
+document.write("<tr>");
+
+// Third set of values
+document.write("<tr>");
+document.write("<td>");
+document.write(miles[2]);
+document.write("</td>");
+document.write("<td>");
+document.write(gallons[2]);
+document.write("</td>");
+document.write("<td>");
+document.write( Math.round(miles[2]/gallons[2]) ); // round to the nearest whole number
+document.write("</td>");
+document.write("<tr>");
+
+// Fourth set of values
+document.write("<tr>");
+document.write("<td>");
+document.write(miles[3]);
+document.write("</td>");
+document.write("<td>");
+document.write(gallons[3]);
+document.write("</td>");
+document.write("<td>");
+document.write( Math.round(miles[3]/gallons[3]) ); // round to the nearest whole number
+document.write("</td>");
+document.write("<tr>");
+
+// Fifth set of values
+document.write("<tr>");
+document.write("<td>");
+document.write(miles[4]);
+document.write("</td>");
+document.write("<td>");
+document.write(gallons[4]);
+document.write("</td>");
+document.write("<td>");
+document.write( Math.round(miles[4]/gallons[4]) ); // round to the nearest whole number
+document.write("</td>");
+document.write("<tr>");
+
+// End table
+document.write("</table>");
+
+</script>
+
+</body>
+</html>
