@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>if - else with nested if - else if - else</title>
+</head>
+
+<body>
+
+<script>
+
+
+/* Structure of if -else if - else statement:
+
+if (condition A) {
+    statement(s)
+}
+else {
+    if (condition B) {
+        statement(s)
+    }
+    else if (condition C) {
+        statement(s)
+    }
+    else {
+        statement(s)
+    }
+}
+
+*/
+
+var a = parseFloat(prompt("Please enter a number:"));
+var b = parseFloat(prompt("Please enter another number:"));
+
+if ( isNaN(a) || isNaN(b) ){
+    document.writeln( "<p>Sorry, I cannot compare the values you entered because at least one is a not a number.</p>");
+}
+else {
+    if ( a < b) {
+        document.writeln( "<p>" + a + " is less than " + b + "</p>");
+    }
+    else if ( a > b) {
+        document.writeln( "<p>" + a + " is greater than " + b + "</p>");
+    }
+    else {
+        document.writeln( "<p>" + a + " is equal to " + b + "</p>");
+    }
+}
+
+</script>
+
+</body>
+</html>
