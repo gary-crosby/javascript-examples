@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Objects | Array object | constructor | methods | properties</title>
+</head>
+<body>
+
+<script> 
+
+
+// PART 1 -- Create (or instantiate) an instances of an object
+
+// Create an instance of the Array object using a constructor
+var fruits = new Array();
+
+// Display fruits[] and an empty <p>:
+document.writeln("<p>fruits[]: " + fruits + "</p><p>&nbsp;</p>");
+
+
+// PART 2 -- Use object methods
+// There is a list of methods for Array object at:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+// Method: push() adds an element to the end of the array and assigns a value to it 
+
+// Use push() to add 4 elements with vlaues to fruits[]
+fruits.push("Bananas");
+fruits.push("Orange");
+fruits.push("Apple");
+fruits.push("Mango");
+
+// Display fruits[] and an empty <p>:
+document.writeln("<p>4 elements added to fruits[] via push(): " + fruits + "</p><p>&nbsp;</p>");
+
+// NOTE: With some older data types that were converted to objects later
+// in the development of JavaScript you can create it this way
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Display fruits[] and an empty <p>:
+document.writeln("<p>4 elements added to fruits[] via push(): " + fruits + "</p><p>&nbsp;</p>");
+
+// Method: unshift() adds an element to the front of the array and assigns a value to it  
+fruits.unshift("Pomegranite");
+fruits.unshift("Durian");
+
+// Display fruits[] and an empty <p>:
+document.writeln("<p>fruits[] with 2 elements added via push(): " + fruits + "</p><p>&nbsp;</p>");
+
+// Method: pop() removes the last element from the array  
+fruits.pop()
+
+// Display fruits[] and an empty <p>:
+document.writeln("<p>fruits[] with last element removed via pop(): " + fruits + "</p><p>&nbsp;</p>");
+
+// Method: sort in ascending order via sort()  
+fruits.sort()
+// Display fruits[] and an empty <p>:
+document.writeln("<p>Sorted fruits[]: " + fruits + "</p><p>&nbsp;</p>");
+
+
+// PART 3 -- Use object properties
+// There is a list of properties for Array object at:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Note: Array object has only 1 property
+
+// Property: length is the number of elements in the array 
+// Display length and an empty <p>:
+document.writeln("<p>fruits.length: " + fruits.length + "</p><p>&nbsp;</p>");
+// Notice how we can concatenate the value of fruits.length to a string just like we can with a variable.
+
+
+</script>
+
+</body>
+</html>
